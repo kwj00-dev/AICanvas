@@ -242,7 +242,7 @@
     </div>
     <div class="item" data-n="3">
       <h3>프롬프트는 “행마다 한 번씩” 실행된다</h3>
-      <p>프롬프트 노드는 표의 <b>각 행에 대해 AI를 1번씩</b> 돌리고, 결과를 새 열로 붙입니다. 행이 100개면 AI 호출도 100번. 글 속 값은 <code>{{컬럼명}}</code>으로 꽂습니다.</p>
+      <p>현대 프롬프트 노드는 표의 <b>각 행에 대해 AI를 1번씩</b> 돌리고, 결과를 새 열로 붙입니다. 행이 100개면 AI 호출도 100번. 글 속 값은 <code>{{컬럼명}}</code>으로 꽂습니다.</p>
     </div>
     <div class="item" data-n="4">
       <h3>비용(크레딧) = 행 수 × 모델</h3>
@@ -260,7 +260,7 @@
   <div class="sec-head">
     <div class="no">02 / DECISION</div>
     <h2>“내가 하려는 일” → 어떤 노드를 찾을까</h2>
-    <p>왼쪽에서 지금 하려는 일을 찾고, 오른쪽 노드를 캔버스에서 추가하세요. 색은 노드가 속한 카테고리(추가 메뉴에서 찾을 위치)입니다.</p>
+    <p>왼쪽에서 지금 하려는 일을 찾고, 오른쪽 노드를 캔버스에서 추가하세요. 노드 옆 라벨은 왼쪽 사이드바에서 찾을 카테고리 위치입니다.</p>
   </div>
   <div class="decision">
     <div class="drow"><div class="dgoal"><span class="dot" style="background:var(--c-data)"></span>내용을 직접 넣고 싶다</div>
@@ -268,15 +268,15 @@
     <div class="drow"><div class="dgoal"><span class="dot" style="background:var(--c-api)"></span>외부에서 데이터를 가져온다</div>
       <div class="dnodes"><span class="chip api"><span class="cdot"></span>크롤링</span><span class="chip api"><span class="cdot"></span>구글 스프레드시트</span><span class="chip api"><span class="cdot"></span>Gmail</span><span class="chip api"><span class="cdot"></span>유튜브 검색/요약</span><span class="chip api"><span class="cdot"></span>슬랙 메시지 가져오기</span><span class="chip data"><span class="cdot"></span>URL 리더</span></div></div>
     <div class="drow"><div class="dgoal"><span class="dot" style="background:var(--c-api)"></span>AI로 요약·분류·작성·추출</div>
-      <div class="dnodes"><span class="chip api"><span class="cdot"></span>프롬프트</span><span class="chip feat"><span class="cdot"></span>가장 많이 씀</span></div></div>
+      <div class="dnodes"><span class="chip api"><span class="cdot"></span>현대 프롬프트</span><span class="chip feat"><span class="cdot"></span>가장 많이 씀</span></div></div>
     <div class="drow"><div class="dgoal"><span class="dot" style="background:var(--c-api)"></span>AI가 검색·계산·도구까지 쓰게</div>
-      <div class="dnodes"><span class="chip api"><span class="cdot"></span>에이전트 프롬프트</span><span class="chip api"><span class="cdot"></span>이미지 생성</span></div></div>
+      <div class="dnodes"><span class="chip api"><span class="cdot"></span>현대 에이전트</span><span class="chip api"><span class="cdot"></span>이미지 생성</span></div></div>
     <div class="drow"><div class="dgoal"><span class="dot" style="background:var(--c-prep)"></span>표를 다듬는다 (열·행 정리)</div>
       <div class="dnodes"><span class="chip prep"><span class="cdot"></span>열 선택</span><span class="chip prep"><span class="cdot"></span>행 선택</span><span class="chip prep"><span class="cdot"></span>데이터 병합</span><span class="chip prep"><span class="cdot"></span>그룹화</span><span class="chip prep"><span class="cdot"></span>중복 제거</span><span class="chip prep"><span class="cdot"></span>결측치 채우기</span></div></div>
     <div class="drow"><div class="dgoal"><span class="dot" style="background:var(--c-data)"></span>조건에 따라 다르게 처리</div>
       <div class="dnodes"><span class="chip data"><span class="cdot"></span>데이터 조건 분기</span><span class="chip data"><span class="cdot"></span>데이터 분할</span><span class="chip data"><span class="cdot"></span>정지</span></div></div>
     <div class="drow"><div class="dgoal"><span class="dot" style="background:var(--c-prep)"></span>우리 문서 기반으로 답하게 (RAG)</div>
-      <div class="dnodes"><span class="chip data"><span class="cdot"></span>PDF-데이터 변환</span><span class="chip prep"><span class="cdot"></span>텍스트 임베딩</span><span class="chip api"><span class="cdot"></span>에이전트 프롬프트</span></div></div>
+      <div class="dnodes"><span class="chip data"><span class="cdot"></span>PDF-데이터 변환</span><span class="chip prep"><span class="cdot"></span>텍스트 임베딩</span><span class="chip api"><span class="cdot"></span>현대 에이전트</span></div></div>
     <div class="drow"><div class="dgoal"><span class="dot" style="background:var(--c-viz)"></span>결과를 보여준다 (화면/차트)</div>
       <div class="dnodes"><span class="chip ui"><span class="cdot"></span>데이터 테이블</span><span class="chip ui"><span class="cdot"></span>텍스트 출력</span><span class="chip ui"><span class="cdot"></span>챗 UI</span><span class="chip viz"><span class="cdot"></span>막대/선/원 그래프</span><span class="chip viz"><span class="cdot"></span>워드클라우드</span></div></div>
     <div class="drow"><div class="dgoal"><span class="dot" style="background:var(--c-noti)"></span>결과를 보내거나 알린다</div>
@@ -289,15 +289,17 @@
       <div class="dnodes"><span class="chip model"><span class="cdot"></span>모델 카테고리(19)</span><span class="chip eval"><span class="cdot"></span>평가 카테고리(9)</span><span class="chip feat"><span class="cdot"></span>고급 · 선택</span></div></div>
   </div>
   <div class="legend">
-    <span class="chip data"><span class="cdot"></span>데이터</span>
-    <span class="chip api"><span class="cdot"></span>API</span>
-    <span class="chip prep"><span class="cdot"></span>전처리</span>
-    <span class="chip model"><span class="cdot"></span>모델</span>
-    <span class="chip eval"><span class="cdot"></span>평가</span>
-    <span class="chip noti"><span class="cdot"></span>알림</span>
-    <span class="chip viz"><span class="cdot"></span>시각화</span>
-    <span class="chip ui"><span class="cdot"></span>UI</span>
-    <span class="chip deploy"><span class="cdot"></span>배포</span>
+    <span style="font-size:13px;color:var(--ink-soft);font-weight:600;align-self:center">사이드바 위치 →</span>
+    <span class="chip data"><span class="cdot"></span>데이터/AI · 데이터</span>
+    <span class="chip api"><span class="cdot"></span>데이터/AI · 서비스연동</span>
+    <span class="chip prep"><span class="cdot"></span>데이터/AI · 전처리</span>
+    <span class="chip model"><span class="cdot"></span>데이터/AI · 모델</span>
+    <span class="chip eval"><span class="cdot"></span>데이터/AI · 평가</span>
+    <span class="chip noti"><span class="cdot"></span>데이터/AI · 알림</span>
+    <span class="chip viz"><span class="cdot"></span>대시보드 · 시각화</span>
+    <span class="chip ui"><span class="cdot"></span>대시보드 · UI</span>
+    <span class="chip deploy" style="background:#EDE9FE;color:#7C3AED;border-color:#C4B5FD"><span class="cdot" style="background:#7C3AED"></span>애플리케이션 · 애플리케이션</span>
+    <span class="chip deploy"><span class="cdot"></span>애플리케이션 · 배포</span>
   </div>
 </section>
 
@@ -311,14 +313,14 @@
   <div class="cores">
 
     <div class="core b-api">
-      <h3><span class="chip api"><span class="cdot"></span>프롬프트</span></h3>
+      <h3><span class="chip api"><span class="cdot"></span>현대 프롬프트</span></h3>
       <p class="role">표의 각 행을 AI에게 보내 요약·분류·작성·추출하고, 결과를 새 열로 받습니다. <b>가장 핵심</b>.</p>
       <p class="port"><b>입력</b> 데이터셋 · <b>출력</b> 데이터셋(+AI 응답 열)</p>
       <p class="when"><b>언제?</b> “이 내용을 AI가 처리해줬으면” 싶은 거의 모든 순간. 글 안에 <code>{{컬럼명}}</code>으로 값 꽂기.</p>
     </div>
 
     <div class="core b-api">
-      <h3><span class="chip api"><span class="cdot"></span>에이전트 프롬프트</span></h3>
+      <h3><span class="chip api"><span class="cdot"></span>현대 에이전트</span></h3>
       <p class="role">프롬프트 + 웹검색·계산·조회 같은 <b>도구를 AI가 스스로 사용</b>. 단순 처리 이상이 필요할 때.</p>
       <p class="port"><b>입력</b> 데이터셋 · <b>출력</b> 데이터셋</p>
       <p class="when"><b>언제?</b> 최신 정보 검색, 자료 조회, 여러 단계 판단이 필요한 챗봇·자동화.</p>
@@ -466,7 +468,7 @@
     <div class="r-flow">
       <span class="chip api"><span class="cdot"></span>구글 스프레드시트</span><span class="arr">→</span>
       <span class="chip prep"><span class="cdot"></span>열 선택</span><span class="arr">→</span>
-      <span class="chip api"><span class="cdot"></span>프롬프트</span><span class="arr">→</span>
+      <span class="chip api"><span class="cdot"></span>현대 프롬프트</span><span class="arr">→</span>
       <span class="chip ui"><span class="cdot"></span>데이터 테이블</span>
     </div>
     <div class="r-note">프롬프트엔 <code>“다음 문의를 환불/배송/기타로 분류해줘: {{문의내용}}”</code>처럼 작성. <b>먼저 데이터 분할로 5행만 테스트</b> 후 전체 실행.</div>
@@ -476,7 +478,7 @@
     <div class="r-top"><h3>② 뉴스·검색 모니터링 자동 보고</h3><p>키워드 수집 → AI 요약/중요도 판단 → 조건에 맞으면 메일·슬랙으로 보고 (스케줄로 매일 자동)</p></div>
     <div class="r-flow">
       <span class="chip api"><span class="cdot"></span>크롤링</span><span class="arr">→</span>
-      <span class="chip api"><span class="cdot"></span>프롬프트</span><span class="arr">→</span>
+      <span class="chip api"><span class="cdot"></span>현대 프롬프트</span><span class="arr">→</span>
       <span class="chip data"><span class="cdot"></span>데이터 조건 분기</span><span class="arr">→</span>
       <span class="chip noti"><span class="cdot"></span>이메일 전송</span>
     </div>
@@ -489,7 +491,7 @@
       <span class="chip data"><span class="cdot"></span>PDF 데이터</span><span class="arr">→</span>
       <span class="chip data"><span class="cdot"></span>PDF-데이터 변환</span><span class="arr">→</span>
       <span class="chip prep"><span class="cdot"></span>텍스트 임베딩</span><span class="arr">→</span>
-      <span class="chip api"><span class="cdot"></span>에이전트 프롬프트</span><span class="arr">→</span>
+      <span class="chip api"><span class="cdot"></span>현대 에이전트</span><span class="arr">→</span>
       <span class="chip ui"><span class="cdot"></span>챗 UI</span>
     </div>
     <div class="r-note">임베딩~검색 연결의 정확한 구성은 docs의 <b>‘사내 문서 RAG 챗봇’ 시나리오</b>를 참고하세요. 프롬프트엔 “문서에 없으면 모른다고 답하라”를 꼭 넣어 환각을 줄입니다.</div>
@@ -500,7 +502,7 @@
     <div class="r-flow">
       <span class="chip data"><span class="cdot"></span>음성 녹음</span><span class="arr">→</span>
       <span class="chip prep"><span class="cdot"></span>음성-텍스트 변환</span><span class="arr">→</span>
-      <span class="chip api"><span class="cdot"></span>프롬프트</span><span class="arr">→</span>
+      <span class="chip api"><span class="cdot"></span>현대 프롬프트</span><span class="arr">→</span>
       <span class="chip noti"><span class="cdot"></span>슬랙 메시지 보내기</span>
     </div>
     <div class="r-note">프롬프트 형식을 “담당자 · 할 일 · 기한 표로”라고 지정하면 정리가 깔끔합니다. 결과를 팀 채널로 자동 공유.</div>
@@ -541,63 +543,208 @@
   <div class="sec-head">
     <div class="no">05 / MAP</div>
     <h2>전체 노드 지도 (레퍼런스)</h2>
-    <p>카테고리를 펼쳐 전체 노드를 확인하세요. 평소엔 닫아두고, 특정 노드를 찾을 때만 펼치면 됩니다. 자세한 설정은 각 노드의 docs 페이지에 있습니다.</p>
+    <p>카테고리를 펼쳐 전체 노드를 확인하세요. 평소엔 닫아두고, 특정 노드를 찾을 때만 펼치면 됩니다.</p>
   </div>
 
   <details class="map" open>
-    <summary><span class="sq" style="background:var(--c-data)"></span>데이터 — 입력·생성·변환<span class="cnt">20 ▸</span><span class="tw">▸</span></summary>
-    <div class="body"><p class="desc">워크플로우의 출발점과 데이터 형태 변환을 담당합니다.</p>
-      <span class="chip data"><span class="cdot"></span>텍스트 입력</span><span class="chip data"><span class="cdot"></span>여러 텍스트 입력</span><span class="chip data"><span class="cdot"></span>데이터</span><span class="chip data"><span class="cdot"></span>데이터 생성</span><span class="chip data"><span class="cdot"></span>데이터 테이블</span><span class="chip data"><span class="cdot"></span>예제 데이터</span><span class="chip data"><span class="cdot"></span>PDF 데이터</span><span class="chip data"><span class="cdot"></span>PDF-데이터 변환</span><span class="chip data"><span class="cdot"></span>텍스트-데이터 변환</span><span class="chip data"><span class="cdot"></span>URL 리더</span><span class="chip data"><span class="cdot"></span>이미지 데이터</span><span class="chip data"><span class="cdot"></span>오디오 데이터</span><span class="chip data"><span class="cdot"></span>음성 녹음</span><span class="chip data"><span class="cdot"></span>데이터 분할</span><span class="chip data"><span class="cdot"></span>데이터 저장소</span><span class="chip data"><span class="cdot"></span>데이터 조건 분기</span><span class="chip data"><span class="cdot"></span>노드 실행</span><span class="chip data"><span class="cdot"></span>정지</span><span class="chip data"><span class="cdot"></span>에이전트로 전달</span><span class="chip data"><span class="cdot"></span>에이전트 메시지 가로채기</span>
+    <summary><span class="sq" style="background:var(--c-data)"></span>① 데이터<span class="cnt">▸</span><span class="tw">▸</span></summary>
+    <div class="body"><p class="desc">워크플로우의 출발점. 데이터를 올리고, 변환하고, 흐름을 제어합니다.</p>
+      <span class="chip data"><span class="cdot"></span>PDF 데이터</span>
+      <span class="chip data"><span class="cdot"></span>PDF-데이터 변환</span>
+      <span class="chip data"><span class="cdot"></span>URL 리더</span>
+      <span class="chip data"><span class="cdot"></span>데이터</span>
+      <span class="chip data"><span class="cdot"></span>데이터 분할</span>
+      <span class="chip data"><span class="cdot"></span>문서 데이터</span>
+      <span class="chip data"><span class="cdot"></span>문서-데이터 변환</span>
+      <span class="chip data"><span class="cdot"></span>에이전트 메시지 가로채기</span>
+      <span class="chip data"><span class="cdot"></span>에이전트로 전달</span>
+      <span class="chip data"><span class="cdot"></span>여러 텍스트 입력</span>
+      <span class="chip data"><span class="cdot"></span>노드 실행</span>
+      <span class="chip data"><span class="cdot"></span>데이터 생성</span>
+      <span class="chip data"><span class="cdot"></span>데이터 저장소</span>
+      <span class="chip data"><span class="cdot"></span>데이터 조건 분기</span>
+      <span class="chip data"><span class="cdot"></span>로컬 데이터 저장소</span>
+      <span class="chip data"><span class="cdot"></span>예제 데이터</span>
+      <span class="chip data"><span class="cdot"></span>이미지 데이터</span>
+      <span class="chip data"><span class="cdot"></span>정지</span>
+      <span class="chip data"><span class="cdot"></span>텍스트 입력</span>
+      <span class="chip data"><span class="cdot"></span>텍스트-데이터 변환</span>
     </div>
   </details>
 
   <details class="map">
-    <summary><span class="sq" style="background:var(--c-api)"></span>API — LLM·연동·크롤링<span class="cnt">23 ▸</span><span class="tw">▸</span></summary>
-    <div class="body"><p class="desc">AI 호출(프롬프트)과 외부 서비스 연동이 모여 있습니다. 가장 자주 쓰는 카테고리.</p>
-      <span class="chip api"><span class="cdot"></span>프롬프트</span><span class="chip api"><span class="cdot"></span>에이전트 프롬프트</span><span class="chip api"><span class="cdot"></span>크롤링</span><span class="chip api"><span class="cdot"></span>고급 크롤링</span><span class="chip api"><span class="cdot"></span>구글 드라이브</span><span class="chip api"><span class="cdot"></span>구글 스프레드시트</span><span class="chip api"><span class="cdot"></span>구글 캘린더</span><span class="chip api"><span class="cdot"></span>구글 폼</span><span class="chip api"><span class="cdot"></span>Gmail</span><span class="chip api"><span class="cdot"></span>슬랙 메시지 가져오기</span><span class="chip api"><span class="cdot"></span>유튜브 검색</span><span class="chip api"><span class="cdot"></span>유튜브 요약</span><span class="chip api"><span class="cdot"></span>유튜브 댓글</span><span class="chip api"><span class="cdot"></span>이미지 생성</span><span class="chip api"><span class="cdot"></span>음성 채팅</span><span class="chip api"><span class="cdot"></span>대화형 아바타</span><span class="chip api"><span class="cdot"></span>기업공시</span><span class="chip api"><span class="cdot"></span>재무지표 분석</span><span class="chip api"><span class="cdot"></span>네이버 플레이스 리뷰</span><span class="chip api"><span class="cdot"></span>깃허브 커밋</span><span class="chip api"><span class="cdot"></span>커스텀 API</span><span class="chip api"><span class="cdot"></span>API 데이터</span><span class="chip api"><span class="cdot"></span>Gamma</span>
+    <summary><span class="sq" style="background:var(--c-api)"></span>② 서비스 연동 — AI·외부 연동<span class="cnt">▸</span><span class="tw">▸</span></summary>
+    <div class="body"><p class="desc">AI 호출과 외부 서비스 연동. <b>현대 프롬프트·현대 에이전트</b>가 핵심 AI 노드입니다.</p>
+      <span class="chip api" style="border-color:var(--accent);background:var(--accent-soft);color:var(--accent)"><span class="cdot" style="background:var(--accent)"></span>현대 프롬프트 ★</span>
+      <span class="chip api" style="border-color:#F59E0B;background:#FFFBEB;color:#B45309;border-style:dashed"><span class="cdot" style="background:#F59E0B"></span>현대 에이전트 (출시 예정)</span>
+      <span class="chip api"><span class="cdot"></span>API 데이터</span>
+      <span class="chip api"><span class="cdot"></span>Gmail</span>
+      <span class="chip api"><span class="cdot"></span>고급 크롤링</span>
+      <span class="chip api"><span class="cdot"></span>구글 드라이브</span>
+      <span class="chip api"><span class="cdot"></span>구글 스프레드시트</span>
+      <span class="chip api"><span class="cdot"></span>구글 캘린더</span>
+      <span class="chip api"><span class="cdot"></span>구글 폼</span>
+      <span class="chip api"><span class="cdot"></span>기업공시</span>
+      <span class="chip api"><span class="cdot"></span>네이버 플레이스 리뷰</span>
+      <span class="chip api"><span class="cdot"></span>대화형 아바타</span>
+      <span class="chip api"><span class="cdot"></span>슬라이드 생성</span>
+      <span class="chip api"><span class="cdot"></span>슬랙 메시지 가져오기</span>
+      <span class="chip api"><span class="cdot"></span>실시간 번역</span>
+      <span class="chip api"><span class="cdot"></span>음성 채팅</span>
+      <span class="chip api"><span class="cdot"></span>이미지 생성</span>
+      <span class="chip api"><span class="cdot"></span>재무지표 분석</span>
+      <span class="chip api"><span class="cdot"></span>커스텀 API</span>
+      <span class="chip api"><span class="cdot"></span>크롤링</span>
     </div>
   </details>
 
   <details class="map">
-    <summary><span class="sq" style="background:var(--c-prep)"></span>전처리 — 표 가공·임베딩<span class="cnt">25 ▸</span><span class="tw">▸</span></summary>
-    <div class="body"><p class="desc">AI에 넘기기 전 표를 다듬고, RAG용 임베딩을 만듭니다. 굵은 것이 현업 단골.</p>
-      <span class="chip prep"><span class="cdot"></span>열 선택</span><span class="chip prep"><span class="cdot"></span>행 선택</span><span class="chip prep"><span class="cdot"></span>데이터 병합</span><span class="chip prep"><span class="cdot"></span>데이터 연결</span><span class="chip prep"><span class="cdot"></span>그룹화</span><span class="chip prep"><span class="cdot"></span>중복 제거</span><span class="chip prep"><span class="cdot"></span>결측치 채우기</span><span class="chip prep"><span class="cdot"></span>데이터 수정</span><span class="chip prep"><span class="cdot"></span>슬라이싱</span><span class="chip prep"><span class="cdot"></span>행 결합</span><span class="chip prep"><span class="cdot"></span>텍스트 전처리</span><span class="chip prep"><span class="cdot"></span>텍스트 임베딩</span><span class="chip prep"><span class="cdot"></span>이미지 임베딩</span><span class="chip prep"><span class="cdot"></span>음성-텍스트 변환</span><span class="chip prep"><span class="cdot"></span>데이터 전처리 프롬프트</span><span class="chip prep"><span class="cdot"></span>특성 생성</span><span class="chip prep"><span class="cdot"></span>데이터 어노테이션</span><span class="chip prep"><span class="cdot"></span>열 타입 변경</span><span class="chip prep"><span class="cdot"></span>파이썬 스크립트</span><span class="chip prep"><span class="cdot"></span>스케일링</span><span class="chip prep"><span class="cdot"></span>데이터 빈닝</span><span class="chip prep"><span class="cdot"></span>이상치 제거</span><span class="chip prep"><span class="cdot"></span>차원 축소</span><span class="chip prep"><span class="cdot"></span>표본 재추출</span><span class="chip prep"><span class="cdot"></span>픽셀 변환</span>
+    <summary><span class="sq" style="background:var(--c-prep)"></span>③ 전처리 — 표 가공·임베딩<span class="cnt">▸</span><span class="tw">▸</span></summary>
+    <div class="body"><p class="desc">AI에 넘기기 전 표를 다듬고, RAG용 임베딩을 만듭니다.</p>
+      <span class="chip prep"><span class="cdot"></span>결측치 채우기</span>
+      <span class="chip prep"><span class="cdot"></span>그룹화</span>
+      <span class="chip prep"><span class="cdot"></span>데이터 병합</span>
+      <span class="chip prep"><span class="cdot"></span>데이터 비닝</span>
+      <span class="chip prep"><span class="cdot"></span>데이터 수정</span>
+      <span class="chip prep"><span class="cdot"></span>데이터 어노테이션</span>
+      <span class="chip prep"><span class="cdot"></span>데이터 연결</span>
+      <span class="chip prep"><span class="cdot"></span>데이터 전처리 현대 프롬프트</span>
+      <span class="chip prep"><span class="cdot"></span>스케일링</span>
+      <span class="chip prep"><span class="cdot"></span>슬라이싱</span>
+      <span class="chip prep"><span class="cdot"></span>열 선택</span>
+      <span class="chip prep"><span class="cdot"></span>열 타입 변경</span>
+      <span class="chip prep"><span class="cdot"></span>음성-텍스트 변환</span>
+      <span class="chip prep"><span class="cdot"></span>이미지 임베딩</span>
+      <span class="chip prep"><span class="cdot"></span>이상치 제거</span>
+      <span class="chip prep"><span class="cdot"></span>중복 제거</span>
+      <span class="chip prep"><span class="cdot"></span>차원 축소</span>
+      <span class="chip prep"><span class="cdot"></span>텍스트 임베딩</span>
+      <span class="chip prep"><span class="cdot"></span>텍스트 전처리</span>
+      <span class="chip prep"><span class="cdot"></span>텍스트-음성 변환</span>
+      <span class="chip prep"><span class="cdot"></span>특성 생성</span>
+      <span class="chip prep"><span class="cdot"></span>파이썬 스크립트</span>
+      <span class="chip prep"><span class="cdot"></span>표본 재추출</span>
+      <span class="chip prep"><span class="cdot"></span>픽셀 변환</span>
+      <span class="chip prep"><span class="cdot"></span>행 결합</span>
+      <span class="chip prep"><span class="cdot"></span>행 선택</span>
     </div>
   </details>
 
   <details class="map">
-    <summary><span class="sq" style="background:var(--c-noti)"></span>알림 — 보내기·트리거<span class="cnt">4 ▸</span><span class="tw">▸</span></summary>
-    <div class="body"><p class="desc">결과를 사람에게 전달하거나, 메시지 수신으로 워크플로우를 시작합니다.</p>
-      <span class="chip noti"><span class="cdot"></span>이메일 전송</span><span class="chip noti"><span class="cdot"></span>슬랙 메시지 보내기</span><span class="chip noti"><span class="cdot"></span>텔레그램 전송</span><span class="chip noti"><span class="cdot"></span>텔레그램 트리거</span>
+    <summary><span class="sq" style="background:var(--c-model)"></span>④ 모델 — 머신러닝 (고급/선택)<span class="cnt">▸</span><span class="tw">▸</span></summary>
+    <div class="body"><p class="desc">데이터로 예측·분류 모델을 직접 만드는 영역. 수요예측·이탈예측·고객분류 등 ML 프로젝트에 사용. 일반 LLM 자동화에는 거의 필요 없습니다.</p>
+      <span class="chip model"><span class="cdot"></span>LightFM</span>
+      <span class="chip model"><span class="cdot"></span>YOLO 모델</span>
+      <span class="chip model"><span class="cdot"></span>결정 트리</span>
+      <span class="chip model"><span class="cdot"></span>그래디언트 부스팅</span>
+      <span class="chip model"><span class="cdot"></span>랜덤 포레스트</span>
+      <span class="chip model"><span class="cdot"></span>로지스틱 회귀</span>
+      <span class="chip model"><span class="cdot"></span>모델 학습</span>
+      <span class="chip model"><span class="cdot"></span>서포트 벡터 머신</span>
+      <span class="chip model"><span class="cdot"></span>선형 회귀</span>
+      <span class="chip model"><span class="cdot"></span>시계열 모델 학습</span>
+      <span class="chip model"><span class="cdot"></span>신경망</span>
+      <span class="chip model"><span class="cdot"></span>얼굴 인식</span>
+      <span class="chip model"><span class="cdot"></span>에이다 부스트</span>
+      <span class="chip model"><span class="cdot"></span>유사도 군집화</span>
+      <span class="chip model"><span class="cdot"></span>일괄 예측</span>
+      <span class="chip model"><span class="cdot"></span>추천 SVD++</span>
+      <span class="chip model"><span class="cdot"></span>추천 모델 학습</span>
+      <span class="chip model"><span class="cdot"></span>추천 베이스라인</span>
+      <span class="chip model"><span class="cdot"></span>현대 프롬프트</span>
     </div>
   </details>
 
   <details class="map">
-    <summary><span class="sq" style="background:var(--c-viz)"></span>시각화 — 차트<span class="cnt">18 ▸</span><span class="tw">▸</span></summary>
-    <div class="body"><p class="desc">표를 그래프로. 데이터셋을 입력받아 차트를 그립니다(출력 포트 없음).</p>
-      <span class="chip viz"><span class="cdot"></span>막대 그래프</span><span class="chip viz"><span class="cdot"></span>수평 막대 그래프</span><span class="chip viz"><span class="cdot"></span>선도표</span><span class="chip viz"><span class="cdot"></span>원 그래프</span><span class="chip viz"><span class="cdot"></span>산점도 그래프</span><span class="chip viz"><span class="cdot"></span>버블 차트</span><span class="chip viz"><span class="cdot"></span>히트맵</span><span class="chip viz"><span class="cdot"></span>게이지 차트</span><span class="chip viz"><span class="cdot"></span>박스 플롯</span><span class="chip viz"><span class="cdot"></span>바이올린 플롯</span><span class="chip viz"><span class="cdot"></span>워드클라우드</span><span class="chip viz"><span class="cdot"></span>데이터 개수</span><span class="chip viz"><span class="cdot"></span>결측치 비율</span><span class="chip viz"><span class="cdot"></span>특성 통계</span><span class="chip viz"><span class="cdot"></span>평균 비교</span><span class="chip viz"><span class="cdot"></span>예측값 비교</span><span class="chip viz"><span class="cdot"></span>평균 예측값</span><span class="chip viz"><span class="cdot"></span>PR 트랜드</span>
+    <summary><span class="sq" style="background:var(--c-eval)"></span>⑤ 평가<span class="cnt">▸</span><span class="tw">▸</span></summary>
+    <div class="body"><p class="desc">모델 성능을 측정하고 시각화합니다. 모델 카테고리와 함께 사용.</p>
+      <span class="chip eval"><span class="cdot"></span>ROC 커브</span>
+      <span class="chip eval"><span class="cdot"></span>메트릭</span>
+      <span class="chip eval"><span class="cdot"></span>모델 평가</span>
+      <span class="chip eval"><span class="cdot"></span>에러 히스토그램</span>
+      <span class="chip eval"><span class="cdot"></span>정답 비율</span>
+      <span class="chip eval"><span class="cdot"></span>정확도</span>
+      <span class="chip eval"><span class="cdot"></span>특성 중요도</span>
+      <span class="chip eval"><span class="cdot"></span>특성 중요도 비교</span>
+      <span class="chip eval"><span class="cdot"></span>혼동 행렬</span>
+    </div>
+  </details>
+
+
+  <details class="map">
+    <summary><span class="sq" style="background:var(--c-viz)"></span>시각화 — 차트·그래프<span class="cnt">▸</span><span class="tw">▸</span></summary>
+    <div class="body"><p class="desc">표를 차트로 시각화합니다. 대시보드 메뉴에서 찾을 수 있습니다.</p>
+      <span class="chip viz"><span class="cdot"></span>막대 그래프</span>
+      <span class="chip viz"><span class="cdot"></span>수평 막대 그래프</span>
+      <span class="chip viz"><span class="cdot"></span>선도표</span>
+      <span class="chip viz"><span class="cdot"></span>원 그래프</span>
+      <span class="chip viz"><span class="cdot"></span>산점도 그래프</span>
+      <span class="chip viz"><span class="cdot"></span>버블 차트</span>
+      <span class="chip viz"><span class="cdot"></span>히트맵</span>
+      <span class="chip viz"><span class="cdot"></span>게이지 차트</span>
+      <span class="chip viz"><span class="cdot"></span>박스 플롯</span>
+      <span class="chip viz"><span class="cdot"></span>바이올린 플롯</span>
+      <span class="chip viz"><span class="cdot"></span>워드클라우드</span>
+      <span class="chip viz"><span class="cdot"></span>데이터 개수</span>
+      <span class="chip viz"><span class="cdot"></span>결측치 비율</span>
+      <span class="chip viz"><span class="cdot"></span>특성 통계</span>
+      <span class="chip viz"><span class="cdot"></span>평균 비교</span>
+      <span class="chip viz"><span class="cdot"></span>예측값 비교</span>
+      <span class="chip viz"><span class="cdot"></span>평균 예측값</span>
+      <span class="chip viz"><span class="cdot"></span>PR 트렌드</span>
     </div>
   </details>
 
   <details class="map">
-    <summary><span class="sq" style="background:var(--c-ui)"></span>UI — 앱 화면 구성<span class="cnt">22 ▸</span><span class="tw">▸</span></summary>
+    <summary><span class="sq" style="background:var(--c-noti)"></span>알림 — 결과 전송<span class="cnt">▸</span><span class="tw">▸</span></summary>
+    <div class="body"><p class="desc">워크플로우 결과를 이메일·메신저로 발송합니다.</p>
+      <span class="chip noti"><span class="cdot"></span>이메일 전송</span>
+      <span class="chip noti"><span class="cdot"></span>텔레그램 전송</span>
+    </div>
+  </details>
+
+  <details class="map">
+    <summary><span class="sq" style="background:var(--c-ui)"></span>⑥ UI — 앱 화면 구성<span class="cnt">▸</span><span class="tw">▸</span></summary>
     <div class="body"><p class="desc">웹앱의 화면 요소. 페이지에 담아 배포하면 동료가 쓰는 앱이 됩니다.</p>
-      <span class="chip ui"><span class="cdot"></span>챗 UI</span><span class="chip ui"><span class="cdot"></span>텍스트 출력</span><span class="chip ui"><span class="cdot"></span>텍스트 편집기</span><span class="chip ui"><span class="cdot"></span>데이터 테이블</span><span class="chip ui"><span class="cdot"></span>데이터 정보</span><span class="chip ui"><span class="cdot"></span>리스트</span><span class="chip ui"><span class="cdot"></span>드롭다운</span><span class="chip ui"><span class="cdot"></span>버튼</span><span class="chip ui"><span class="cdot"></span>필터</span><span class="chip ui"><span class="cdot"></span>탭</span><span class="chip ui"><span class="cdot"></span>페이지</span><span class="chip ui"><span class="cdot"></span>아이콘</span><span class="chip ui"><span class="cdot"></span>이미지 뷰어</span><span class="chip ui"><span class="cdot"></span>PDF 뷰어</span><span class="chip ui"><span class="cdot"></span>오디오 출력</span><span class="chip ui"><span class="cdot"></span>에이전트</span><span class="chip ui"><span class="cdot"></span>예측 하기</span><span class="chip ui"><span class="cdot"></span>AI 앱 빌더</span><span class="chip ui"><span class="cdot"></span>샌드박스</span><span class="chip ui"><span class="cdot"></span>CM</span><span class="chip ui"><span class="cdot"></span>CM 서브 질문</span><span class="chip ui"><span class="cdot"></span>CM 챗 평가</span>
+      <span class="chip ui" style="border-color:var(--accent);background:var(--accent-soft);color:var(--accent)"><span class="cdot" style="background:var(--accent)"></span>현대 에이전트 ★</span>
+      <span class="chip ui"><span class="cdot"></span>AI 앱 빌더</span>
+      <span class="chip ui"><span class="cdot"></span>HTML 파서</span>
+      <span class="chip ui"><span class="cdot"></span>데이터 정보</span>
+      <span class="chip ui"><span class="cdot"></span>데이터 테이블</span>
+      <span class="chip ui"><span class="cdot"></span>드롭다운</span>
+      <span class="chip ui"><span class="cdot"></span>리스트</span>
+      <span class="chip ui"><span class="cdot"></span>문서 뷰어</span>
+      <span class="chip ui"><span class="cdot"></span>버튼</span>
+      <span class="chip ui"><span class="cdot"></span>샌드박스</span>
+      <span class="chip ui"><span class="cdot"></span>아이콘</span>
+      <span class="chip ui"><span class="cdot"></span>예측 하기</span>
+      <span class="chip ui"><span class="cdot"></span>오디오 출력</span>
+      <span class="chip ui"><span class="cdot"></span>이미지 뷰어</span>
+      <span class="chip ui"><span class="cdot"></span>챗 UI</span>
+      <span class="chip ui"><span class="cdot"></span>탭</span>
+      <span class="chip ui"><span class="cdot"></span>텍스트 출력</span>
+      <span class="chip ui"><span class="cdot"></span>텍스트 편집기</span>
+      <span class="chip ui"><span class="cdot"></span>페이지</span>
+      <span class="chip ui"><span class="cdot"></span>필터</span>
+      <span class="chip ui"><span class="cdot"></span>행</span>
+      <span class="chip ui"><span class="cdot"></span>에이전트</span>
     </div>
   </details>
 
   <details class="map">
-    <summary><span class="sq" style="background:var(--c-deploy)"></span>배포 — 게시·API<span class="cnt">3 ▸</span><span class="tw">▸</span></summary>
+    <summary><span class="sq" style="background:#8B5CF6"></span>애플리케이션<span class="cnt">▸</span><span class="tw">▸</span></summary>
+    <div class="body"><p class="desc">완성된 앱을 관리하고 메뉴 구조를 설정합니다.</p>
+      <span class="chip deploy" style="background:#EDE9FE;color:#7C3AED;border-color:#C4B5FD"><span class="cdot" style="background:#7C3AED"></span>애플리케이션</span>
+      <span class="chip deploy" style="background:#EDE9FE;color:#7C3AED;border-color:#C4B5FD"><span class="cdot" style="background:#7C3AED"></span>애플리케이션 메뉴 변경</span>
+    </div>
+  </details>
+
+  <details class="map">
+    <summary><span class="sq" style="background:var(--c-deploy)"></span>배포 — 게시·API<span class="cnt">▸</span><span class="tw">▸</span></summary>
     <div class="body"><p class="desc">완성한 앱·데이터·워크플로우를 외부에서 쓸 수 있게 공개합니다.</p>
-      <span class="chip deploy"><span class="cdot"></span>배포</span><span class="chip deploy"><span class="cdot"></span>데이터셋 API 배포</span><span class="chip deploy"><span class="cdot"></span>워크플로우 API 배포</span>
-    </div>
-  </details>
-
-  <details class="map">
-    <summary><span class="sq" style="background:var(--c-model)"></span>모델 · 평가 — 머신러닝 (고급/선택)<span class="cnt">28 ▸</span><span class="tw">▸</span></summary>
-    <div class="body"><p class="desc">데이터로 예측·분류 모델을 직접 만드는 영역입니다. 수요예측·이탈예측·고객분류 같은 <b>데이터 분석 프로젝트</b>에 쓰며, 일반 LLM 자동화에는 거의 필요 없습니다. 필요할 때 docs를 참고하세요.</p>
-      <span class="chip model"><span class="cdot"></span>선형 회귀</span><span class="chip model"><span class="cdot"></span>로지스틱 회귀</span><span class="chip model"><span class="cdot"></span>결정 트리</span><span class="chip model"><span class="cdot"></span>랜덤 포레스트</span><span class="chip model"><span class="cdot"></span>그래디언트 부스팅</span><span class="chip model"><span class="cdot"></span>서포트 벡터 머신</span><span class="chip model"><span class="cdot"></span>K-평균 군집화</span><span class="chip model"><span class="cdot"></span>신경망</span><span class="chip model"><span class="cdot"></span>시계열 모델 학습</span><span class="chip model"><span class="cdot"></span>모델 학습</span><span class="chip model"><span class="cdot"></span>YOLO / 얼굴 인식 등</span>
-      <span class="chip eval"><span class="cdot"></span>ROC 커브</span><span class="chip eval"><span class="cdot"></span>혼동 행렬</span><span class="chip eval"><span class="cdot"></span>평가 지표 등(9)</span>
+      <span class="chip deploy"><span class="cdot"></span>배포</span>
+      <span class="chip deploy"><span class="cdot"></span>데이터셋 API 배포</span>
+      <span class="chip deploy"><span class="cdot"></span>워크플로우 API 배포</span>
     </div>
   </details>
 
