@@ -154,6 +154,32 @@
   details.map .body{padding:4px 20px 18px;display:flex;flex-wrap:wrap;gap:7px}
   details.map .body p.desc{width:100%;font-size:13.5px;color:var(--ink-soft);margin-bottom:6px}
 
+  /* SIDE NAV */
+  .sidenav{
+    position:fixed;left:28px;top:50%;transform:translateY(-50%);
+    display:flex;flex-direction:column;gap:5px;z-index:200;
+  }
+  .sidenav a{
+    display:flex;align-items:center;gap:9px;padding:9px 13px;
+    border-radius:11px;text-decoration:none;color:var(--ink-soft);
+    background:var(--card);border:1px solid var(--line);
+    box-shadow:var(--shadow);transition:all .18s;font-size:13px;font-weight:600;
+    white-space:nowrap;
+  }
+  .sidenav a .sn{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    font-weight:700;color:var(--accent);flex:none;
+  }
+  .sidenav a .sl{color:var(--ink-soft);font-size:12.5px}
+  .sidenav a:hover{color:var(--ink);border-color:var(--accent);transform:translateX(2px)}
+  .sidenav a.active{
+    background:var(--accent-soft);border-color:var(--accent);
+    color:var(--accent);
+  }
+  .sidenav a.active .sl{color:var(--accent)}
+  @media(max-width:1280px){.sidenav{display:none}}
+
+  section{scroll-margin-top:24px}
   footer{padding:38px 0 64px;text-align:center;color:var(--ink-faint);font-size:13.5px;border-top:1px dashed var(--line-strong)}
   footer a{color:var(--accent);text-decoration:none;font-weight:600}
 
@@ -167,6 +193,15 @@
 </style>
 </head>
 <body>
+<nav class="sidenav" id="sidenav">
+  <a href="#mm" data-sec="mm"><span class="sn">01</span><span class="sl">5가지 원리</span></a>
+  <a href="#decision" data-sec="decision"><span class="sn">02</span><span class="sl">노드 선택</span></a>
+  <a href="#core" data-sec="core"><span class="sn">03</span><span class="sl">핵심 노드</span></a>
+  <a href="#recipe" data-sec="recipe"><span class="sn">04</span><span class="sl">레시피</span></a>
+  <a href="#trouble" data-sec="trouble"><span class="sn">04.5</span><span class="sl">트러블슈팅</span></a>
+  <a href="#map" data-sec="map"><span class="sn">05</span><span class="sl">노드 지도</span></a>
+</nav>
+
 <div class="wrap">
 
 <!-- HERO -->
@@ -484,7 +519,7 @@
 </section>
 
 <!-- GOTCHAS -->
-<section>
+<section id="trouble">
   <div class="sec-head">
     <div class="no">04.5 / TROUBLESHOOT</div>
     <h2>“왜 안 되지?” 자주 막히는 7가지</h2>
@@ -575,5 +610,24 @@
 </footer>
 
 </div>
+<script>
+  const sections = ['mm','decision','core','recipe','trouble','map'];
+  const navLinks = document.querySelectorAll('.sidenav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.dataset.sec === entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if(el) observer.observe(el);
+  });
+</script>
 </body>
 </html>
